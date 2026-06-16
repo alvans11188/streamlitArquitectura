@@ -271,7 +271,7 @@ def multiplicacionSinSignoDiagrama(multiplicando: int, multiplicador: int):
     resultado = f"<b>Resultado Final (A Q):</b><br>"
     resultado += f"Binario: {bitset8(A)} {bitset8(Q)}<br>"
     resultado += f"Decimal: {productoFinal}<br>"
-    resultado += f"Comprobacion: {M} x {Q} = {M * Q}"
+    
     
     return header, rows, resultado
 

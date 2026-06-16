@@ -365,4 +365,4 @@ elif choice == "Multiplicación Sin Signo":
         st.markdown(resultado, unsafe_allow_html=True)
 
 st.markdown("---")
-st.markdown("Desarrollado usando Streamlit. Código traducido de C++ a Python.")
+st.markdown("GAAAA")

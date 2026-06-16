@@ -2,7 +2,7 @@ import streamlit as st
 import math
 import pandas as pd
 
-# Módulo 1: Conversiones Basicas y Complementos (8 bits)
+# Modulo 1: Conversiones Basicas y Complementos (8 bits)
 
 def binario_decimal(n: str):
     if not n:
@@ -13,8 +13,7 @@ def binario_decimal(n: str):
     
     if not magnitud:
         return f"RESPUESTA: {signo_char}0"
-    
-    # Invert to iterate from lowest significant bit
+
     magnitud_rev = magnitud[::-1]
     
     bina = [1, 2, 4, 8, 16, 32, 64, 128]
@@ -111,7 +110,7 @@ def decimal_a_c2(dato: int):
     pasos += f"RESPUESTA (Complemento a 2): {res}"
     return pasos, res
 
-# Módulo 2: Algoritmo de Booth (8 Bits)
+# Modulo 2: Algoritmo de Booth (8 Bits)
 def bitset8(n: int) -> str:
     return format(n & 0xFF, '08b')
 
@@ -177,7 +176,7 @@ def algoritmoBooth(multiplicando: int, multiplicador: int, conSigno: bool):
     
     return pasos_html, rows, resultado_texto
 
-# Módulo 3: Coma Flotante IEEE 754
+# Modulo 3: Coma Flotante IEEE 754
 def decimal_a_ieee754(numero: float):
     if numero == 0.0:
         return "0|00000000|00000000000000000000000", "0", "00000000", "00000000000000000000000"
@@ -229,7 +228,7 @@ def decimal_a_ieee754(numero: float):
         
     return f"{signo}(signo) | {exponente_bin}(exponente) | {mantisa}(mantisa)", signo, exponente_bin, mantisa
 
-# Módulo 4: Multiplicación Sin Signo
+# Modulo 4: Multiplicacion Sin Signo
 def multiplicacionSinSignoDiagrama(multiplicando: int, multiplicador: int):
     MASCARA_8BITS = 0xFF
     M = multiplicando & MASCARA_8BITS
